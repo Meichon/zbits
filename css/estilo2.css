@@ -1,0 +1,181 @@
+/* Estilos generales */
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+
+header {
+	background-color: #f5f5f5;
+	padding: 20px 0;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	height:150px;
+	margin: 50px 0px 0px 80px;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+}
+
+.menu li {
+	margin-left: 20px;
+}
+
+.menu a {
+	color: #333;
+	text-decoration: none;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+	
+	.burger {
+		display: block;
+	}
+	
+	.burger div {
+		margin: 0;
+	}
+	
+	.burger div:first-child {
+		transform: rotate(45deg);
+	}
+	
+	.burger div:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.burger div:last-child {
+		transform: rotate(-45deg);
+	}
+	
+	.menu.active {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		background-color: #f5f5f5;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+		z-index: 1;
+	}
+	
+	.menu.active li {
+		margin: 10px 0;
+	}
+}
+
+/* Estilos del hero */
+
+.hero {
+	background-image: url(hero.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hero h1 {
+	color: #fff;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.cta {
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	margin-top: 20px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.cta:hover {
+	background-color: #444;
+}
+
+/* Estilos de secciones */
+
+.about {
+	background-color: #fff;
+	padding: 100px 0;
+}
+
+.about h2 {
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+.services {
+	background-color: #f5f5f5;
+	padding: 100px 0;
+}
+
+.services h2 {
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+.service {
+	margin-bottom: 40px;
+}
+
+.service h3 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.service p {
+	margin-bottom: 20px;
+}
+
+.service .cta {
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text
